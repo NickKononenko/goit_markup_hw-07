@@ -41,6 +41,10 @@ svg {
   display: block;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* Container */
 
 .container {
@@ -367,6 +371,7 @@ svg {
 }
 
 .footer-paragraph {
+  width: 264px;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -501,6 +506,10 @@ svg {
 .footer-input:focus {
   border-color: var(--primary-brand);
   outline: none;
+}
+
+.footer-input::placeholder {
+  color: var(--text-color-white);
 }
 
 .footer-btn {
@@ -745,13 +754,9 @@ svg {
   |============================
 */
 
-.our-job-section {
-  display: none;
-}
-
-@media screen and (min-width: 1158px) {
+@media screen and (max-width: 1157px) {
   .our-job-section {
-    display: block;
+    display: none;
   }
 }
 
@@ -1274,4 +1279,106 @@ svg {
   transform: translateY(-50%);
   transition: outline var(--def-duration) var(--def-timing-function),
     fill var(--def-duration) var(--def-timing-function);
+}
+
+/**
+  |============================
+  | Mobile menu styles
+  |============================
+*/
+
+.menu-toggle {
+  border: none;
+  background-color: transparent;
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 80px 35px 40px 40px;
+  background-color: var(--text-color-white);
+  z-index: 999;
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  fill: var(--dark-color);
+  padding: 8px;
+  border: 1px solid var(--accent-color);
+  border-radius: 50%;
+}
+
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: auto;
+}
+
+.mobile-menu .link {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: var(--dark-color);
+  text-decoration: none;
+}
+
+.mobile-menu .link:hover,
+.mobile-menu .link:focus {
+  color: var(--pressed-state);
+}
+
+.mobile-phone {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: var(--primary-brand);
+}
+
+.mobile-mail {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--text-color);
+}
+
+.mobile-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  margin-bottom: 48px;
+}
+
+.mobile-sm-list {
+  display: flex;
+  gap: 56px;
 }

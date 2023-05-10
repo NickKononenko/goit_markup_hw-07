@@ -37,7 +37,11 @@
             </li>
           </ul>
         </nav>
-        <button class="burger-btn">
+        <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
           <svg class="burger-icon" width="32" height="22">
             <use href="./images/icons.svg#icon-menu-hamburger-converted"></use>
           </svg>
@@ -504,7 +508,70 @@
         </form>
       </div>
     </div>
+    <!-- Mobile menu -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg class="close-icon" width="8" height="8">
+          <use href="./images/icons.svg#icon-close-black"></use>
+        </svg>
+      </button>
 
+      <ul class="mobile-menu">
+        <li><a href="" class="link">Studio</a></li>
+        <li><a href="" class="link">Portfolio</a></li>
+        <li><a href="" class="link">Contacts</a></li>
+      </ul>
+
+      <ul class="mobile-contacts">
+        <li>
+          <a href="tel:+110001111111" class="mobile-phone link"
+            >+11 (000) 111-11-11</a
+          >
+        </li>
+        <li>
+          <a href="mailto:info@devstudio.com" class="mobile-mail link"
+            >info@devstudio.com</a
+          >
+        </li>
+      </ul>
+      <ul class="mobile-sm-list">
+        <li class="mobile-sm-list-item">
+          <a href="" class="sm-link">
+            <svg class="sm-icon" width="16" height="16">
+              <use href="./images/icons.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="mobile-sm-list-item">
+          <a href="" class="sm-link">
+            <svg class="sm-icon" width="16" height="16">
+              <use href="./images/icons.svg#icon-twitter2"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="mobile-sm-list-item">
+          <a href="" class="sm-link">
+            <svg class="sm-icon" width="16" height="16">
+              <use href="./images/icons.svg#icon-facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="mobile-sm-list-item">
+          <a href="" class="sm-link">
+            <svg class="sm-icon" width="16" height="16">
+              <use href="./images/icons.svg#icon-linkedin"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>
