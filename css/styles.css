@@ -1031,6 +1031,24 @@ a {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .card-set-item {
+    width: calc((100% - 24px) / 2);
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .card-set-item {
+    width: calc((100% - 48px) / 3);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .portfolio-img {
+    width: 396px;
+  }
+}
+
 .card-link {
   display: block;
   transition: box-shadow var(--def-duration) var(--def-timing-function);
