@@ -944,8 +944,15 @@ a {
 */
 
 .portfolio {
-  padding-top: 96px;
-  padding-bottom: 120px;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+@media screen and (min-width: 1158px) {
+  .portfolio {
+    padding-top: 96px;
+    padding-bottom: 120px;
+  }
 }
 
 .portfolio-header {
@@ -960,9 +967,22 @@ a {
 
 .filter {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
   gap: 24px;
-  margin-bottom: 72px;
+  margin-bottom: 48px;
+}
+
+@media screen and (min-width: 768px) {
+  .filter {
+    justify-content: center;
+    margin-bottom: 64px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .filter {
+    margin-bottom: 72px;
+  }
 }
 
 .filter .button {
@@ -1001,12 +1021,26 @@ a {
 .portfolio-card-set {
   display: flex;
   flex-wrap: wrap;
-  gap: 48px 24px;
+  row-gap: 48px;
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio-card-set {
+    row-gap: 72px;
+    column-gap: 24px;
+  }
 }
 
 .card-link {
   display: block;
   transition: box-shadow var(--def-duration) var(--def-timing-function);
+}
+
+@media screen and (max-width: 1157px) {
+  .card-link {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+      0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  }
 }
 
 .card-link:hover,
@@ -1290,6 +1324,7 @@ a {
 .menu-toggle {
   border: none;
   background-color: transparent;
+  padding: 0;
 }
 
 @media (min-width: 768px) {
