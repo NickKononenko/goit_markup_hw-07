@@ -36,7 +36,12 @@ ul {
   list-style: none;
 }
 
-img,
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 svg {
   display: block;
 }
@@ -557,20 +562,89 @@ a {
   |============================
 */
 
+@media only screen and (max-width: 428px) {
+  .hero-section {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(
+        to right,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero/Dark-bg_mob@1x.jpg);
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero-section {
+      background-image: linear-gradient(
+          to right,
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/hero/Dark-bg_mob@2x.jpg);
+    }
+  }
+}
+
+@media only screen and (min-width: 429px) and (max-width: 767px) {
+  .hero-section {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(
+        to right,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero/Dark-bg_tab@1x.jpg);
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero-section {
+      background-image: linear-gradient(
+          to right,
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/hero/Dark-bg_tab@2x.jpg);
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .hero-section {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(
+        to right,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero/Dark-bg_desk@1x.jpg);
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero-section {
+      background-image: linear-gradient(
+          to right,
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/hero/Dark-bg_desk@2x.jpg);
+    }
+  }
+}
+
 .hero-section {
   margin-left: auto;
   margin-right: auto;
   height: 432px;
   max-width: 1440px;
-  background-image: linear-gradient(
-      to right,
-      rgba(46, 47, 66, 0.7),
-      rgba(46, 47, 66, 0.7)
-    ),
-    url(../images/people-office1.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
   text-align: center;
   padding-top: 112px;
   padding-bottom: 112px;
@@ -671,21 +745,8 @@ a {
 
 .our-values-list {
   display: flex;
-  flex-direction: column;
-  row-gap: 72px;
-}
-
-@media screen and (min-width: 768px) {
-  .our-values-list {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-}
-
-@media screen and (min-width: 1158px) {
-  .our-values-list {
-    gap: 24px;
-  }
+  flex-wrap: wrap;
+  gap: 72px 24px;
 }
 
 @media screen and (min-width: 1158px) {
@@ -1040,12 +1101,6 @@ a {
 @media screen and (min-width: 1158px) {
   .card-set-item {
     width: calc((100% - 48px) / 3);
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .portfolio-img {
-    width: 396px;
   }
 }
 
